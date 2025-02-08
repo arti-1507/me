@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Love Letter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Love Letter to You 💕</h1>
+    <p id="letter"></p>
+    <a href="gallery.html" class="btn">See Our Gallery</a>
+
+    <script>
+        const letterText = "My Love,From the moment you walked into my life, you brought warmth, happiness, and endless love. You are the reason my heart beats a little faster, my smiles last a little longer, and my days feel brighter.I have never believed in fairy tales, but with you, every moment feels like magic. You are my best friend, my soulmate, and my greatest love.Today, I want to promise you that my love will always remain as strong as the first day. I will stand by your side through every storm and cherish every sunshine moment we share.I love you, forever and always. 💖";
+        let i = 0;
+        function typeLetter() {
+            if (i < letterText.length) {
+                document.getElementById("letter").innerHTML += letterText.charAt(i);
+                i++;
+                setTimeout(typeLetter, 100);
+            }
+        }
+        typeLetter();
+    </script>
+</body>
+</html>
